@@ -1,0 +1,253 @@
+:root {
+  --blanco: #ffffff;
+  --oscuro: #212121;
+  --primario: #f1e7b6;
+  --secundario: #fe346e;
+  --terciario: #400082;
+  --cuarto: #00bdaa;
+  --quinto: #757575;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+.servicios,
+nav,
+.formulario {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+body {
+  font-size: 16px;
+  font-family: "krub", sans-serif;
+  background-color: var(--primario);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.contenedor {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.boton {
+  background-color: var(--quinto);
+  color: var(--blanco);
+  padding: 1rem 3rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  width: 90%;
+  text-align: center;
+  border: none;
+}
+
+.boton:hover {
+  cursor: pointer;
+  background-color: #fe346e;
+}
+
+h1 {
+  font-size: 3.8rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+.titulo span {
+  font-size: 2rem;
+}
+
+.nav-bg {
+  background-color: var(--quinto);
+}
+
+@media (min-width: 480px) {
+  .boton {
+    width: auto;
+  }
+}
+
+.sombra {
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(112, 112, 112, 0.54);
+  -moz-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.54);
+  box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.54);
+  background-color: var(--blanco);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+nav a {
+  display: block;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+nav a:hover {
+  background-color: var(--secundario);
+  color: var(--oscuro);
+}
+
+.hero {
+  background-image: url(../img/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 350px;
+  position: relative;
+  margin-bottom: 2rem;
+}
+.contenidohero {
+  position: absolute;
+  background-color: rgba (0, 0, 0, 0.6);
+  background-color: rgb(0 0 0 /60%);
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contenidohero h2,
+.contenidohero p {
+  color: var(--blanco);
+}
+
+@media (min-width: 768px) {
+  .servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5rem;
+    text-align: center;
+  }
+}
+
+.servicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.servicio h3 {
+  color: var(--cuarto);
+  font-weight: bold;
+}
+
+.servicio p {
+  line-height: 2rem;
+  text-align: center;
+}
+
+.servicio .icono {
+  height: 12rem;
+  width: 12rem;
+  background-color: var(--secundario);
+  border-radius: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.formulario {
+  background-color: var(--cuarto);
+  width: min (20rem, 100%); /**utilizar el valor mas pequeño*/
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.formulario fieldset {
+  border: none;
+}
+
+.formulario legend {
+  color: var(--secundario);
+  text-align: center;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .contenedorcampos {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto 20rem;
+    column-gap: 1rem;
+  }
+}
+
+.campo:nth-child(3) {
+  grid-column: 1/3;
+}
+
+.campo:nth-child(4) {
+  grid-column: 1/3;
+}
+
+.campo {
+  margin-bottom: 1rem;
+}
+
+.campo label {
+  color: var(--blanco);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.inputtext {
+  width: 100%;
+  border: none;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.enviar .boton {
+  width: 100%;
+}
+
+.campo textarea {
+  height: 17rem;
+}
+
+footer {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  color: #757575;
+}
